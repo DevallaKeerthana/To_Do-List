@@ -1,7 +1,8 @@
-/*Google Font*/
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /*Reset*/
+
 *{
     margin:0;
     padding:0;
@@ -10,6 +11,7 @@
 }
 
 /*Body*/
+
 body{
     min-height:100vh;
     display:flex;
@@ -20,12 +22,14 @@ body{
     padding:30px;
 }
 
-/*Dark Theme*/
-body{
-    background: linear-gradient(135deg, #667eea, #764ba2);
+/* Dark Theme */
+
+body.dark{
+    background:linear-gradient(135deg,#111827,#1f2937);
 }
 
 /*Container*/
+
 .container{
     width:100%;
     max-width:700px;
@@ -36,13 +40,15 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,.25);
     color:white;
     transition:.4s;
+    overflow:hidden;
 }
 
-body.dark{
-    background:linear-gradient(135deg,#111827,#1f2937);
+body.dark .container{
+    background:rgba(20,20,20,.6);
 }
 
 /*Header*/
+
 header{
     display:flex;
     justify-content:space-between;
@@ -76,6 +82,7 @@ header p{
 }
 
 /*Search Box*/
+
 .search-box{
     position:relative;
     margin-bottom:20px;
@@ -98,6 +105,7 @@ header p{
 }
 
 /*Input Section*/
+
 .input-section{
     display:flex;
     gap:10px;
@@ -130,6 +138,7 @@ header p{
 }
 
 /*Statistics*/
+
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -158,6 +167,7 @@ header p{
 }
 
 /*Task List*/
+
 #taskList{
     list-style:none;
 }
@@ -177,20 +187,19 @@ header p{
     transform:scale(1.02);
 }
 
-/*Task Text*/
 .task-text{
     flex:1;
     font-size:17px;
     margin-right:15px;
 }
 
-/*Completed Task*/
 .completed{
     text-decoration:line-through;
     color:#9cff9c;
 }
 
 /*Action Buttons*/
+
 .actions{
     display:flex;
     gap:8px;
@@ -231,6 +240,7 @@ header p{
 }
 
 /*Bottom Button*/
+
 .bottom-buttons{
     margin-top:25px;
     text-align:center;
@@ -251,7 +261,8 @@ header p{
     transform:scale(1.05);
 }
 
-/*Footer*/
+/*Footer */
+
 footer{
     margin-top:30px;
     text-align:center;
@@ -267,10 +278,18 @@ footer{
     color:#eeeeee;
 }
 
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
 .social-icons a{
     color:white;
-    margin:0 10px;
-    font-size:22px;
+    font-size:24px;
     transition:.3s;
 }
 
@@ -279,33 +298,82 @@ footer{
     transform:scale(1.2);
 }
 
-/*Responsive*/
-@media(max-width:768px){
+/*Responsive */
+
+@media (max-width:768px){
+
+body{
+    padding:15px;
+}
+
+.container{
+    width:100%;
+    max-width:100%;
+    padding:20px;
+}
 
 header{
     flex-direction:column;
+    align-items:center;
+    text-align:center;
     gap:15px;
-}j
+}
 
-.stats{
-    grid-template-columns:1fr;
+header h1{
+    font-size:30px;
+}
+
+.theme-btn{
+    margin-top:10px;
 }
 
 .input-section{
     flex-direction:column;
 }
 
+.input-section input,
 .input-section button{
     width:100%;
 }
 
-header h1{
-    font-size:28px;
+.stats{
+    grid-template-columns:1fr;
+}
+
+.card{
+    width:100%;
+}
+
+#taskList li{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.actions{
+    width:100%;
+    justify-content:flex-end;
+}
+
+footer{
+    text-align:center;
+}
+
+.social-icons{
+    gap:18px;
 }
 
 }
 
-/*Scroll Bar*/
+/*Images */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/*Scroll Bar */
+
 ::-webkit-scrollbar{
     width:8px;
 }
